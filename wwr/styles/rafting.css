@@ -43,6 +43,7 @@ article {
   text-decoration: none;
 }
 
+/* Header (Grid) & Nav (Flexbox) */
 header {
   display: grid;
   grid-template-columns: 160px 1fr;
@@ -68,7 +69,7 @@ header nav a {
   padding: 8px 16px;
 }
 
-/* Hero */
+/* Hero Section */
 .hero {
   position: relative;
 }
@@ -107,6 +108,75 @@ header nav a {
   margin-left: 12px;
 }
 
+/* History Section Layout (3 Columns) */
+.history-section {
+  text-align: center;
+  margin: 24px 0;
+}
+
+.history-section h2 {
+  margin-bottom: 12px;
+}
+
+.history-content {
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr;
+  gap: 16px;
+  align-items: center;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.history-content p {
+  margin: 0;
+  padding: 0;
+}
+
+.history-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Adventure Awaits You Section (5 Horizontal Figures) */
+.adventures-section {
+  text-align: center;
+  margin: 24px 0;
+}
+
+.adventures-section h2 {
+  margin-bottom: 12px;
+}
+
+.adventures-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.adventures-container figure {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.adventures-container img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.adventures-container figcaption {
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-top: 8px;
+  color: var(--primary-color);
+}
+
+/* Footer Layout (Flexbox) */
 footer {
   display: flex;
   align-items: center;
