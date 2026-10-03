@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 2rem 1rem;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #eeeeee;
+    padding: 2rem;
+    border: 1px solid #d3d3d3;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #000080;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-size: 1.05rem;
+}
+
+.q-num {
+    font-weight: bold;
+    color: #000080;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #767676;
+    background-color: #ffffff;
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.code-block {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 0.75rem 1rem;
+    width: fit-content;
+    margin: 0.25rem 0;
+    font-family: monospace;
+    font-size: 0.95rem;
+}
+
+button[type="submit"] {
+    background-color: #000080;
+    color: #ffffff;
+    border: none;
+    padding: 0.85rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #000055;
+}
