@@ -33,8 +33,7 @@ h2 {
 
 nav,
 p,
-section,
-article {
+section {
   margin: 16px;
   padding: 8px;
 }
@@ -43,7 +42,9 @@ article {
   text-decoration: none;
 }
 
-/* Header (Grid) & Nav (Flexbox) */
+/* ===================================================
+   Header & Navigation
+   =================================================== */
 header {
   display: grid;
   grid-template-columns: 160px 1fr;
@@ -69,7 +70,9 @@ header nav a {
   padding: 8px 16px;
 }
 
-/* Hero Section */
+/* ===================================================
+   Hero Section Layout
+   =================================================== */
 .hero {
   position: relative;
 }
@@ -86,11 +89,12 @@ header nav a {
   width: 100%;
   padding: 16px;
   text-align: center;
-  opacity: 0.7;
+  opacity: 0.85;
   background-color: var(--accent1-color);
   color: #ffffff;
 }
 
+.hero .hero-article,
 .hero article {
   position: absolute;
   bottom: 20px;
@@ -102,13 +106,81 @@ header nav a {
   border-left: 4px solid var(--secondary-color);
 }
 
+.hero .hero-article img,
 .hero article img {
   float: right;
   width: 125px;
   margin-left: 12px;
 }
 
-/* History Section Layout */
+/* Call to Action Button */
+.cta-btn {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: var(--accent1-color);
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.cta-btn:hover {
+  background-color: var(--accent2-color);
+}
+
+/* ===================================================
+   Home Page Grid & Newsletter
+   =================================================== */
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 24px 16px;
+}
+
+.grid-card {
+  background-color: #f9f9f9;
+  padding: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.grid-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.newsletter-section {
+  background-color: #f9f9f9;
+  padding: 24px;
+  margin: 24px 16px;
+  text-align: center;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.newsletter-form .form-item {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* ===================================================
+   About Us Page Layouts
+   =================================================== */
 .history-section {
   text-align: center;
   margin: 24px 0;
@@ -139,7 +211,6 @@ header nav a {
   border-radius: 4px;
 }
 
-/* Adventure Awaits You Section */
 .adventures-section {
   text-align: center;
   margin: 24px 0;
@@ -176,36 +247,74 @@ header nav a {
   color: var(--primary-color);
 }
 
-/* Footer Layout (Flexbox) */
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/* ===================================================
+   Trips Page Layouts & Table
+   =================================================== */
+.trips-cta {
+  text-align: center;
+  margin: 24px 16px;
+}
+
+.trips-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 24px 16px;
+}
+
+.trip-card {
+  background-color: #f9f9f9;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.trip-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.trip-card figcaption {
+  padding: 16px;
+}
+
+.trip-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.trips-table-section {
+  margin: 32px 16px;
+  text-align: center;
+}
+
+.trips-table-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.trips-table-section th,
+.trips-table-section td {
+  border: 1px solid #cccccc;
+  padding: 12px;
+  text-align: center;
+}
+
+.trips-table-section th {
   background-color: var(--primary-color);
-  color: var(--accent2-color);
+  color: #ffffff;
 }
 
-footer p {
-  margin: 0;
-  padding: 8px;
-}
-
-.socialmedia {
-  display: flex;
-  gap: 8px;
-  margin: 8px;
-}
-
-.socialmedia img {
-  width: 32px;
-  height: 32px;
+.trips-table-section tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
 /* ===================================================
-   Contact Us Page Specific Styles (contact.html)
+   Contact Us Page Layouts
    =================================================== */
-
-/* Company Info Header */
 .company-info {
   text-align: center;
   margin: 24px 0 16px 0;
@@ -221,7 +330,6 @@ footer p {
   padding: 0;
 }
 
-/* Two-column Layout for Map & Form */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -238,7 +346,6 @@ footer p {
   border-radius: 4px;
 }
 
-/* Contact Form Styling */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -309,7 +416,6 @@ footer p {
   background-color: var(--accent1-color);
 }
 
-/* Employee Section */
 .employees-section {
   text-align: center;
   margin: 32px 0 24px 0;
@@ -350,4 +456,31 @@ footer p {
   font-weight: normal;
   font-size: 0.85rem;
   color: #555555;
+}
+
+/* ===================================================
+   Footer Layout
+   =================================================== */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
+}
+
+footer p {
+  margin: 0;
+  padding: 8px;
+}
+
+.socialmedia {
+  display: flex;
+  gap: 8px;
+  margin: 8px;
+}
+
+.socialmedia img {
+  width: 32px;
+  height: 32px;
 }
